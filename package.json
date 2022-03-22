@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GaleedGutierrez/-Curso-Profesional-de-JavaScript.git"
+    "url": "git+https://github.com/GaleedGutierrez/Curso-Profesional-de-JavaScript.git"
   },
   "keywords": [
     "javascript",
@@ -17,7 +17,7 @@
   "author": "Galeed Gutierrez <galeedeveloper@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/GaleedGutierrez/-Curso-Profesional-de-JavaScript/issues"
+    "url": "https://github.com/GaleedGutierrez/Curso-Profesional-de-JavaScript/issues"
   },
-  "homepage": "https://github.com/GaleedGutierrez/-Curso-Profesional-de-JavaScript#readme"
+  "homepage": "https://github.com/GaleedGutierrez/Curso-Profesional-de-JavaScript#readme"
 }
