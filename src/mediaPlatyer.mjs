@@ -7,7 +7,7 @@ class MediaPlayer {
     ) {
         this.media = element;
         this.plugins = plugins;
-        this.#initPlugins();
+        if (plugins.length !== 0) this.#initPlugins();
     }
 
     tooglePlay () {
@@ -29,7 +29,7 @@ class MediaPlayer {
     unmute (media) { media.muted = false }
 
     #initPlugins () {
-        const { plugins } = this ;
+        const { plugins } = this;
         plugins.forEach(plugin => plugin.run(this));
     }
 }
