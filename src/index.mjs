@@ -1,5 +1,6 @@
 import MediaPlayer from './mediaPlatyer.mjs';
 import AutoPlay from './plugins/AutoPlay.mjs';
+import AutoPause from './plugins/AutoPause.mjs';
 
 const soundVideo = player => player.soundVideo();
 const tooglePlay = player => player.tooglePlay();
@@ -10,7 +11,7 @@ const buttonMuteUnmute = document.getElementById('buttonMuteUnmute');
 const player = new MediaPlayer(
     {
         element: video,
-        plugins: [new AutoPlay()],
+        plugins: [new AutoPlay(), new AutoPause()],
     }
 );
 
