@@ -1,4 +1,4 @@
-import MediaPlayer from './mediaPlatyer.mjs';
+import MediaPlayer from './mediaPlayer.mjs';
 import AutoPlay from './plugins/AutoPlay.mjs';
 import AutoPause from './plugins/AutoPause.mjs';
 
@@ -17,3 +17,8 @@ const player = new MediaPlayer(
 
 buttonMuteUnmute.onclick = () => soundVideo(player);
 button.onclick = () => tooglePlay(player);
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+        .catch(error => console.log(error));
+}
