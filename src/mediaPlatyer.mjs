@@ -33,10 +33,10 @@ class MediaPlayer {
 
         const player = {
             media,
-            play: () => this.play(this.media),
-            pause: () => this.pause(this.media),
-            get muted() { return this.media.muted; },
-            set muted(value) { this.media.muted = value; },
+            play: () => this.play(media),
+            pause: () => this.pause(media),
+            get muted() { return media.muted; },
+            set muted(value) { media.muted = value; },
         };
 
         plugins.forEach(plugin => plugin.run(player));
