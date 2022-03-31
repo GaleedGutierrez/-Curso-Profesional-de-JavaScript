@@ -4,7 +4,7 @@
   "description": "Curso de Platzi",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html ./ejercicios/**/*.html"
   },
   "repository": {
     "type": "git",
@@ -12,12 +12,16 @@
   },
   "keywords": [
     "javascript",
-    "platzivideo"
+    "platzivideo",
+    "typescript"
   ],
   "author": "Galeed Gutierrez <galeedeveloper@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/GaleedGutierrez/Curso-Profesional-de-JavaScript/issues"
   },
-  "homepage": "https://github.com/GaleedGutierrez/Curso-Profesional-de-JavaScript#readme"
+  "homepage": "https://github.com/GaleedGutierrez/Curso-Profesional-de-JavaScript#readme",
+  "browerslist": [
+    "last 1 Chrome version"
+  ]
 }

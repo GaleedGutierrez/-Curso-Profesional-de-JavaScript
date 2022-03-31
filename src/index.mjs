@@ -19,6 +19,6 @@ buttonMuteUnmute.onclick = () => soundVideo(player);
 button.onclick = () => tooglePlay(player);
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js')
+    navigator.serviceWorker.register('./../sw.js')
         .catch(error => console.log(error));
 }

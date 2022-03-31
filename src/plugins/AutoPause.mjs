@@ -24,10 +24,10 @@ class AutoPause {
 
     handleVisibilitychange () {
         const { player, titleDOM } = this;
-        // const isVisible = document.visibilityState === 'visible';
-        const isVisible = document.hidden;
-        // isVisible ? player.play() : player.pause();
-        if (!isVisible) {
+        const isVisible = document.visibilityState === 'visible';
+        // const isVisible = document.hidden;
+        // !isVisible ? player.play() : player.pause();
+        if (isVisible) {
             player.play();
             document.title = titleDOM;
         } else {
