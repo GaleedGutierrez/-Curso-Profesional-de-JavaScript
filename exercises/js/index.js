@@ -1,18 +1,20 @@
-// Funciones
-function add(a, b) {
-    return a + b;
+// enum
+var Color;
+(function (Color) {
+    Color["Rojo"] = "Rojo";
+    Color["Verde"] = "Verde";
+})(Color || (Color = {}));
+var rect = {
+    ancho: 4,
+    alto: 6,
+    color: Color.Rojo
+};
+function area(r) {
+    return r.alto * r.ancho;
 }
-var sum = add(4, 6);
-function createAdder(a) {
-    return function (b) {
-        return b + a;
-    };
-}
-var addFour = createAdder(4);
-var fourPlusSix = addFour(6);
-function fullName(fistName, lastName) {
-    if (lastName === void 0) { lastName = 'Gutierez'; }
-    return fistName + " " + lastName;
-}
-var galeed = fullName('Galeed');
-console.log(galeed);
+var areaRect = area(rect);
+console.log(areaRect);
+rect.toString = function () {
+    return this.color ? "Un rectangulo " + this.color : 'Un rectangulo';
+};
+console.log(rect.toString());

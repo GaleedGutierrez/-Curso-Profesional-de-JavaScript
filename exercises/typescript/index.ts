@@ -1,22 +1,29 @@
-// Funciones
-function add (a: number, b:number): number {
-    return a + b;
+// enum
+enum Color {
+    Rojo = 'Rojo',
+    Verde = 'Verde',
 }
 
-const sum = add(4, 6);
-
-function createAdder (a: number): (number) => number {
-    return function (b: number) {
-        return b + a;
-    }
+// Interface
+interface Rectangulo {
+    ancho: number;
+    alto: number;
+    color?: Color;
 }
 
-const addFour = createAdder(4);
-const fourPlusSix = addFour(6);
-
-function fullName (fistName: string, lastName: string = 'Gutierez'): string {
-    return `${fistName} ${lastName}`;
+let rect: Rectangulo = {
+    ancho: 4,
+    alto: 6,
+    color: Color.Rojo,
 }
 
-const galeed = fullName('Galeed')
-console.log(galeed)
+function area (r: Rectangulo): number {
+    return r.alto * r.ancho;
+}
+
+const areaRect = area(rect);
+console.log(areaRect);
+rect.toString = function () {
+    return this.color ? `Un rectangulo ${this.color}` : 'Un rectangulo'
+}
+console.log(rect.toString())
