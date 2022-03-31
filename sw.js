@@ -23,7 +23,11 @@ async function cachedResponse (request) {
 async function updateCache (request) {
     const cache = await caches.open(VERSION);
     const response = await fetch(request);
-    return cache.put(request, response);
+    if (response.status === 206) console.info('Partial answer, won\'t be update cache...');
+    if (response.status !== 206)  {
+        const returnCache = await cache.put(request, response);
+        return returnCache;
+    }
 }
 
 self.addEventListener('install',
