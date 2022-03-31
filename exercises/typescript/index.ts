@@ -1,37 +1,22 @@
-// Boolean
-let muted: boolean = true;
-muted = false;
-
-// Números
-let numerador: number= 42;
-let denominador: number = 6;
-let resultado = numerador / denominador;
-
-// String
-let nombre: string = 'Galeed';
-let saludo = `Mi nombres es ${nombre}.`;
-
-// Arreglos
-let people: string[] = [];
-people = ['Isabel', 'Nicole', 'Raul'];
-
-let peopleAndNumber: Array< string | number > = [];
-peopleAndNumber.push(nombre);
-peopleAndNumber.push(100);
-
-// enum
-enum Color {
-    Rojo = "Rojo",
-    Verde = "Verder",
-    Azul = "Azul",
-    Amarrillo = "Amarrillo",
+// Funciones
+function add (a: number, b:number): number {
+    return a + b;
 }
-let colorFavorito: Color = Color.Verde;
-console.log(`Mi color favorito es ${colorFavorito}`);
 
-// any
-let comodin: any = 'Joker';
-comodin = {type: 'Wildcard'}
+const sum = add(4, 6);
 
-// Object
-let someObject: Object = {type: 'Wildcard'}
+function createAdder (a: number): (number) => number {
+    return function (b: number) {
+        return b + a;
+    }
+}
+
+const addFour = createAdder(4);
+const fourPlusSix = addFour(6);
+
+function fullName (fistName: string, lastName: string = 'Gutierez'): string {
+    return `${fistName} ${lastName}`;
+}
+
+const galeed = fullName('Galeed')
+console.log(galeed)
