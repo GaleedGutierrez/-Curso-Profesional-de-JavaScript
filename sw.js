@@ -5,9 +5,9 @@ async function precache () {
             '/',
             '/index.html',
             '/src/index.mjs',
-            '/src/MediaPlayer.mjs',
+            '/src/MediaPlayer.js',
             '/src/plugins/AutoPlay.mjs',
-            '/src/plugins/AutoPause.mjs',
+            '/src/plugins/AutoPause.js',
             '/styles/index.css',
             '/assets/BigBuckBunny.mp4',
         ]

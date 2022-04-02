@@ -1,6 +1,6 @@
-import MediaPlayer from './mediaPlayer.mjs';
+import MediaPlayer from './mediaPlayer.js';
 import AutoPlay from './plugins/AutoPlay.mjs';
-import AutoPause from './plugins/AutoPause.mjs';
+import AutoPause from './plugins/AutoPause.js';
 
 const soundVideo = player => player.soundVideo();
 const tooglePlay = player => player.tooglePlay();
