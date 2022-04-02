@@ -23,7 +23,7 @@ class AutoPause {
         const { player, config } = this;
         const entry = entries[0];
         const isVisible = entry.intersectionRatio >= config.threshold;
-        isVisible ? player.play() : player.pause();
+        isVisible ? player.media.play() : player.media.pause();
     }
 
     private handleVisibilitychange () {
@@ -32,10 +32,10 @@ class AutoPause {
         // const isVisible = document.hidden;
         // !isVisible ? player.play() : player.pause();
         if (isVisible) {
-            player.play();
+            player.media.play();
             document.title = titleDOM;
         } else {
-            player.pause();
+            player.media.pause();
             document.title = '¡Sigue viendo! :D';
         }
     }

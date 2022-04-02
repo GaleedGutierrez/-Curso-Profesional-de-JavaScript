@@ -17,7 +17,7 @@ var AutoPause = /** @class */ (function () {
         var _a = this, player = _a.player, config = _a.config;
         var entry = entries[0];
         var isVisible = entry.intersectionRatio >= config.threshold;
-        isVisible ? player.play() : player.pause();
+        isVisible ? player.media.play() : player.media.pause();
     };
     AutoPause.prototype.handleVisibilitychange = function () {
         var _a = this, player = _a.player, titleDOM = _a.titleDOM;
@@ -25,11 +25,11 @@ var AutoPause = /** @class */ (function () {
         // const isVisible = document.hidden;
         // !isVisible ? player.play() : player.pause();
         if (isVisible) {
-            player.play();
+            player.media.play();
             document.title = titleDOM;
         }
         else {
-            player.pause();
+            player.media.pause();
             document.title = '¡Sigue viendo! :D';
         }
     };

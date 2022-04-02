@@ -1,13 +1,13 @@
 import MediaPlayer from './mediaPlayer.js';
-import AutoPlay from './plugins/AutoPlay.mjs';
+import AutoPlay from './plugins/AutoPlay.js';
 import AutoPause from './plugins/AutoPause.js';
 
 const soundVideo = player => player.soundVideo();
 const tooglePlay = player => player.tooglePlay();
 
 const video = document.querySelector('video');
-const button = document.querySelector('button');
-const buttonMuteUnmute = document.getElementById('buttonMuteUnmute');
+const playButton: HTMLElement = document.querySelector('#playButton');
+const muteButton: HTMLElement = document.getElementById('muteButton');
 const player = new MediaPlayer(
     {
         element: video,
@@ -15,8 +15,8 @@ const player = new MediaPlayer(
     }
 );
 
-buttonMuteUnmute.onclick = () => soundVideo(player);
-button.onclick = () => tooglePlay(player);
+muteButton.onclick = () => soundVideo(player);
+playButton.onclick = () => tooglePlay(player);
 
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./../sw.js')
