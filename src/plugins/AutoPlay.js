@@ -1,3 +1,5 @@
+"use strict";
+exports.__esModule = true;
 var AutoPlay = /** @class */ (function () {
     function AutoPlay() {
     }
@@ -8,4 +10,4 @@ var AutoPlay = /** @class */ (function () {
     };
     return AutoPlay;
 }());
-export default AutoPlay;
+exports["default"] = AutoPlay;

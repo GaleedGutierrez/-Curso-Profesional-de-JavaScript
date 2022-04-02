@@ -1,3 +1,5 @@
+"use strict";
+exports.__esModule = true;
 var AutoPause = /** @class */ (function () {
     function AutoPause() {
         this.config = { threshold: 0.25 };
@@ -35,4 +37,4 @@ var AutoPause = /** @class */ (function () {
     };
     return AutoPause;
 }());
-export default AutoPause;
+exports["default"] = AutoPause;
