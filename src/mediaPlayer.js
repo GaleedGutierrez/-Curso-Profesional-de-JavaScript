@@ -1,3 +1,5 @@
+"use strict";
+exports.__esModule = true;
 var MediaPlayer = /** @class */ (function () {
     function MediaPlayer(_a) {
         var element = _a.element, _b = _a.plugins, plugins = _b === void 0 ? [] : _b;
@@ -24,4 +26,4 @@ var MediaPlayer = /** @class */ (function () {
     };
     return MediaPlayer;
 }());
-export default MediaPlayer;
+exports["default"] = MediaPlayer;

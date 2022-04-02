@@ -23,5 +23,8 @@
   "homepage": "https://github.com/GaleedGutierrez/Curso-Profesional-de-JavaScript#readme",
   "browerslist": [
     "last 1 Chrome version"
-  ]
+  ],
+  "devDependencies": {
+    "typescript": "4.6.3"
+  }
 }
