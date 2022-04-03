@@ -1,19 +1,18 @@
-"use strict";
-exports.__esModule = true;
-var mediaPlayer_js_1 = require("./mediaPlayer.js");
-var AutoPlay_js_1 = require("./plugins/AutoPlay.js");
-var AutoPause_js_1 = require("./plugins/AutoPause.js");
-var soundVideo = function (player) { return player.soundVideo(); };
-var tooglePlay = function (player) { return player.tooglePlay(); };
-var video = document.querySelector('video');
-var playButton = document.querySelector('#playButton');
-var muteButton = document.getElementById('muteButton');
-var player = new mediaPlayer_js_1["default"]({
+import MediaPlayer from './mediaPlayer.js';
+import AutoPlay from './plugins/AutoPlay.js';
+import AutoPause from './plugins/AutoPause.js';
+const soundVideo = player => player.soundVideo();
+const tooglePlay = player => player.tooglePlay();
+const video = document.querySelector('video');
+const playButton = document.querySelector('#playButton');
+const muteButton = document.getElementById('muteButton');
+const player = new MediaPlayer({
     element: video,
-    plugins: [new AutoPlay_js_1["default"](), new AutoPause_js_1["default"]()]
+    plugins: [new AutoPlay(), new AutoPause()],
 });
-muteButton.onclick = function () { return soundVideo(player); };
-playButton.onclick = function () { return tooglePlay(player); };
+muteButton.onclick = () => soundVideo(player);
+playButton.onclick = () => tooglePlay(player);
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./../sw.js')["catch"](function (error) { return console.log(error); });
+    navigator.serviceWorker.register('./../sw.js')
+        .catch(error => console.log(error));
 }
