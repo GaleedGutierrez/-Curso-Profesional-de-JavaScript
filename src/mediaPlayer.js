@@ -1,29 +1,26 @@
-"use strict";
-exports.__esModule = true;
-var MediaPlayer = /** @class */ (function () {
-    function MediaPlayer(_a) {
-        var element = _a.element, _b = _a.plugins, plugins = _b === void 0 ? [] : _b;
+class MediaPlayer {
+    media;
+    plugins;
+    constructor({ element, plugins = [], }) {
         this.media = element;
         this.plugins = plugins;
         this.initPlugins();
     }
-    MediaPlayer.prototype.tooglePlay = function () {
-        var _a = this, media = _a.media, play = _a.play, pause = _a.pause;
+    tooglePlay() {
+        const { media, play, pause } = this;
         media.paused ? play(media) : pause(media);
-    };
-    MediaPlayer.prototype.soundVideo = function () {
-        var _a = this, media = _a.media, mute = _a.mute, unmute = _a.unmute;
+    }
+    soundVideo() {
+        const { media, mute, unmute } = this;
         media.muted ? unmute(media) : mute(media);
-    };
-    MediaPlayer.prototype.play = function (media) { media.play(); };
-    MediaPlayer.prototype.pause = function (media) { media.pause(); };
-    MediaPlayer.prototype.mute = function (media) { media.muted = true; };
-    MediaPlayer.prototype.unmute = function (media) { media.muted = false; };
-    MediaPlayer.prototype.initPlugins = function () {
-        var _this = this;
-        var plugins = this.plugins;
-        plugins.forEach(function (plugin) { return plugin.run(_this); });
-    };
-    return MediaPlayer;
-}());
-exports["default"] = MediaPlayer;
+    }
+    play(media) { media.play(); }
+    pause(media) { media.pause(); }
+    mute(media) { media.muted = true; }
+    unmute(media) { media.muted = false; }
+    initPlugins() {
+        const { plugins } = this;
+        plugins.forEach(plugin => plugin.run(this));
+    }
+}
+export default MediaPlayer;
