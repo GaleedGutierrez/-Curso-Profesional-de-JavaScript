@@ -1,9 +1,11 @@
 class MediaPlayer {
     media;
+    container;
     plugins;
     constructor({ element, plugins = [], }) {
         this.media = element;
         this.plugins = plugins;
+        this.initPlayer();
         this.initPlugins();
     }
     tooglePlay() {
@@ -18,6 +20,12 @@ class MediaPlayer {
     pause(media) { media.pause(); }
     mute(media) { media.muted = true; }
     unmute(media) { media.muted = false; }
+    initPlayer() {
+        this.container = document.createElement('div');
+        this.container.classList.add('element-position-relative');
+        this.media.parentNode.insertBefore(this.container, this.media);
+        this.container.appendChild(this.media);
+    }
     initPlugins() {
         const { plugins } = this;
         plugins.forEach(plugin => plugin.run(this));
