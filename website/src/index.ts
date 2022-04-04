@@ -1,7 +1,7 @@
-import MediaPlayer from './mediaPlayer.js';
-import AutoPlay from './plugins/AutoPlay.js';
-import AutoPause from './plugins/AutoPause.js';
-import Ads from './plugins/ads/index.js';
+import MediaPlayer from '@galeedgutierrez/platzimediaplayer/src/mediaPlayer.js';
+import AutoPlay from '@galeedgutierrez/platzimediaplayer/src/plugins/AutoPlay.js';
+import AutoPause from '@galeedgutierrez/platzimediaplayer/src/plugins/AutoPause.js';
+import Ads from '@galeedgutierrez/platzimediaplayer/src/plugins/ads/index.js';
 
 const soundVideo = player => player.soundVideo();
 const tooglePlay = player => player.tooglePlay();

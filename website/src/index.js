@@ -1,7 +1,7 @@
-import MediaPlayer from './mediaPlayer.js';
-import AutoPlay from './plugins/AutoPlay.js';
-import AutoPause from './plugins/AutoPause.js';
-import Ads from './plugins/ads/index.js';
+import MediaPlayer from './mediaPlayer.js.js';
+import AutoPlay from './plugins/AutoPlay.js.js';
+import AutoPause from './plugins/AutoPause.js.js';
+import Ads from './plugins/ads/index.js.js';
 const soundVideo = player => player.soundVideo();
 const tooglePlay = player => player.tooglePlay();
 const video = document.querySelector('video');
