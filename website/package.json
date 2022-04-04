@@ -26,5 +26,8 @@
   ],
   "devDependencies": {
     "typescript": "4.6.3"
+  },
+  "dependencies": {
+    "@galeedgutierrez/platzimediaplayer": "^1.0.0"
   }
 }
